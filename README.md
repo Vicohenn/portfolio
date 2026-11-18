@@ -15,7 +15,7 @@ Estudante de Ciência de Dados e estagiário de dados/BI no setor público de sa
 
 | Projeto | Descrição | Ferramentas | Status |
 |---------|-----------|-------------|--------|
-| [Análise de E-commerce — Olist](olist-ecommerce-analysis/) | Análise de ~100 mil pedidos de um marketplace brasileiro: vendas, recompra, logística e satisfação do cliente | SQL (DuckDB), Power BI | ✅ Concluído |
+| [Análise de E-commerce — Olist](analise-ecommerce-olist/) | Análise de ~100 mil pedidos de um marketplace brasileiro: vendas, recompra, logística e satisfação do cliente | SQL (DuckDB), Power BI | ✅ Concluído |
 
 ## Estudos
 

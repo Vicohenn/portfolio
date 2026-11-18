@@ -1,6 +1,6 @@
 # Dados brutos (baixados do Kaggle — ver README de cada projeto)
-olist-ecommerce-analysis/data/raw/*
-!olist-ecommerce-analysis/data/raw/.gitkeep
+analise-ecommerce-olist/data/raw/*
+!analise-ecommerce-olist/data/raw/.gitkeep
 
 # Bancos locais gerados
 *.duckdb
