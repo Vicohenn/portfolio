@@ -1,0 +1,41 @@
+{
+  "name": "Olist Portfolio",
+  "dataColors": ["#2563EB", "#0B1F33", "#60A5FA", "#94A3B8", "#DC2626", "#F59E0B", "#10B981", "#A855F7"],
+  "foreground": "#1E293B",
+  "foregroundNeutralSecondary": "#64748B",
+  "foregroundNeutralTertiary": "#94A3B8",
+  "background": "#FFFFFF",
+  "backgroundLight": "#F3F5F9",
+  "backgroundNeutral": "#E3E8EF",
+  "tableAccent": "#2563EB",
+  "good": "#10B981",
+  "neutral": "#F59E0B",
+  "bad": "#DC2626",
+  "maximum": "#2563EB",
+  "center": "#94A3B8",
+  "minimum": "#DC2626",
+  "textClasses": {
+    "callout": { "fontSize": 26, "fontFace": "Segoe UI Semibold", "color": "#0B1F33" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#0B1F33" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#0B1F33" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#64748B" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": false }],
+        "border": [{ "show": false }],
+        "dropShadow": [{ "show": false }],
+        "visualHeader": [{ "show": true }],
+        "title": [{ "fontColor": { "solid": { "color": "#0B1F33" } }, "fontSize": 12, "fontFamily": "Segoe UI Semibold" }],
+        "subTitle": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F3F5F9" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#F3F5F9" } } }]
+      }
+    }
+  }
+}
