@@ -1,0 +1,22 @@
+# Dados brutos (baixados do Kaggle — ver README de cada projeto)
+olist-ecommerce-analysis/data/raw/*
+!olist-ecommerce-analysis/data/raw/.gitkeep
+
+# Bancos locais gerados
+*.duckdb
+*.duckdb.wal
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Exportações para o Power BI (geradas por sql/05_export_powerbi.sql)
+pbi_*.parquet
