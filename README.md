@@ -16,6 +16,7 @@ Estudante de Ciência de Dados e estagiário de dados/BI no setor público de sa
 | Projeto | Descrição | Ferramentas | Status |
 |---------|-----------|-------------|--------|
 | [Análise de E-commerce — Olist](analise-ecommerce-olist/) | Análise de ~100 mil pedidos de um marketplace brasileiro: vendas, recompra, logística e satisfação do cliente | SQL (DuckDB), Power BI | ✅ Concluído |
+| [Inflação, juros e câmbio no Brasil](inflacao-juros-cambio-brasil/) | Pipeline que coleta dados do Banco Central e do IBGE, atualizado todo mês com GitHub Actions | Python, pandas, APIs, GitHub Actions | ✅ Concluído |
 
 ## Estudos
 

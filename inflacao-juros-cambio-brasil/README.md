@@ -32,7 +32,7 @@ Python (requests, pandas) · Parquet · matplotlib · GitHub Actions
 
 **3. A inflação pesou mais no essencial. De 2012 a 2026, alimentação e bebidas subiram 176%, contra 126% do índice geral.** Educação, saúde e habitação também ficaram acima da média. No outro extremo, comunicação subiu só 23%.
 
-![Inflação grupos IPCA](graficos/03_ipca_grupos)
+![Inflação grupos IPCA](graficos/03_ipca_grupos.png) 
 
 **4. O dólar chega à inflação com quase um ano de atraso.** A correlação entre a variação do dólar e o IPCA é quase nula no mesmo mês (0,09) e cresce até cerca de 0,42 com 8 a 12 meses de defasagem. É uma relação moderada: o câmbio ajuda a explicar a inflação futura, mas não sozinho.
 
