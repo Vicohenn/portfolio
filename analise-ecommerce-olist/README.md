@@ -62,8 +62,6 @@ Quatro páginas com navegação entre elas: visão geral, clientes, entrega e ca
 
 Fonte: [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-Os CSVs **não** ficam no repositório. Para reproduzir, baixe o dataset e extraia os arquivos em `data/raw/`.
-
 | Tabela | Conteúdo |
 |--------|----------|
 | `orders` | Pedidos, status e datas (compra, aprovação, envio, entrega) |
