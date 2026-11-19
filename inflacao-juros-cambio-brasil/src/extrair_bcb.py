@@ -1,5 +1,7 @@
 import time
 import requests
+from datetime import date, timedelta
+import pandas as pd
 
 URL_BASE = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados"
 
@@ -33,6 +35,23 @@ def chamar_api(codigo, data_inicio_txt, data_fim_txt):
         raise RuntimeError(f"Série {codigo}: status {resposta.status_code}")
     return resposta.json()
 
-dados = chamar_api(433, "01/01/2025", "31/10/2026")
-print(len(dados), "regitros")
-print(dados[:3])
+def buscar_serie(codigo, data_inicio, data_fim):
+    """Busca uma série inteira, dividindo em blocos de até 10 anos"""
+    registros = []
+    inicio = data_inicio
+
+    while inicio <= data_fim:                         # enquanto ainda houver período a buscar
+        fim_bloco = inicio.replace(year=inicio.year + 10) - timedelta(days=1)
+        fim = min(fim_bloco, data_fim)      # o bloco não pode passar da data final
+
+        print(f"Série {codigo}: {inicio} a {fim}")
+        registros += chamar_api(codigo, inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y"))
+
+        inicio = fim + timedelta(days=1)
+        time.sleep(1)
+    return pd.DataFrame(registros)
+
+df = buscar_serie(433, date(2010, 1, 1), date.today())
+print(df.shape)
+print(df.head())
+print(df.tail())
