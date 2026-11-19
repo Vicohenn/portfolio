@@ -2,6 +2,7 @@ import time
 import requests
 from datetime import date, timedelta
 import pandas as pd
+from pathlib import Path
 
 URL_BASE = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados"
 
@@ -51,7 +52,11 @@ def buscar_serie(codigo, data_inicio, data_fim):
         time.sleep(1)
     return pd.DataFrame(registros)
 
-df = buscar_serie(433, date(2010, 1, 1), date.today())
-print(df.shape)
-print(df.head())
-print(df.tail())
+if __name__ == "__main__":
+    pasta = Path("data/bruto")
+    pasta.mkdir(parents=True, exist_ok=True)
+
+    for codigo, nome in SERIES.items():
+        df = buscar_serie(codigo, date(2010, 1, 1), date.today())
+        df.to_parquet(pasta / f"{nome}.parquet", index=False)
+        print(f"{nome}: {len(df)} registros salvos")
