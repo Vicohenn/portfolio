@@ -1,0 +1,43 @@
+name: Atualizar projeto de inflação, juros e câmbio
+
+on:
+  schedule:
+    - cron: "0 12 15 * *"   # todo dia 15, às 12h UTC (9h de Brasília)
+  workflow_dispatch:         # permite rodar na mão pelo site do GitHub
+
+permissions:
+  contents: write            # autoriza o robô a fazer commit
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: inflacao-juros-cambio-brasil
+
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar as bibliotecas
+        run: python -m pip install -r requirements.txt
+
+      - name: Rodar o pipeline
+        run: |
+          python src/extrair_bcb.py
+          python src/extrair_ibge.py
+          python src/tratar.py
+          python src/analisar.py
+
+      - name: Salvar os dados atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data graficos
+          git diff --staged --quiet || git commit -m "Atualiza dados e gráficos (automático)"
+          git push
