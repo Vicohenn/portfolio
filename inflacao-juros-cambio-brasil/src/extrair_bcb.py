@@ -21,7 +21,7 @@ SERIES = {
     3698: "dolar_medio"
 }
 
-def chamar_api(codigo, data_inicio_txt, data_fim_txt):
+def chamar_api(codigo, data_inicio_txt, data_fim_txt, tentativas=4):
     """Faz UMA chamada à API do BCO e devolve a lista de registros.
     Se o servidor falhar (status 5xx), tenta de novo com espera crescente."""
     url = URL_BASE.format(codigo=codigo)
@@ -33,7 +33,7 @@ def chamar_api(codigo, data_inicio_txt, data_fim_txt):
             "dataFinal": data_fim_txt,
             "_": int(time.time())
         }
-        resposta = requests.get(url, params=parametros, headers=CABECALHOS, timeout=30)
+        resposta = requests.get(url, params=parametros, headers=CABECALHOS, timeout=60)
 
         if resposta.status_code == 200:
             return resposta.json()
@@ -41,6 +41,7 @@ def chamar_api(codigo, data_inicio_txt, data_fim_txt):
         if resposta.status_code >= 500 and tentativa < tentativas:
             espera = 5 * 2 ** (tentativa - 1) # 5s, 10s, 20s, ...
             print(f" Série {codigo}: status {resposta.status_code}, nova tentativa em {espera}s")
+            time.sleep(espera)
             continue
         raise RuntimeError(f"Série {codigo}: status {resposta.status_code}")
 
