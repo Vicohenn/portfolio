@@ -1,6 +1,6 @@
 # Inflação, juros e câmbio no Brasil
 
-> 🚧 Projeto em andamento
+> ✅ Projeto finalizado
 
 Pipeline em Python que coleta dados das APIs públicas do Banco Central e do IBGE, trata e analisa a relação entre inflação, taxa de juros e câmbio no Brasil.
 
