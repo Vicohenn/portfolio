@@ -1,3 +1,4 @@
 data/bruto/
+data/tratado/
 *.duckdb
-.venv\
+.venv/
