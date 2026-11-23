@@ -1,0 +1,3 @@
+data/bruto/
+*.duckdb
+.venv\
