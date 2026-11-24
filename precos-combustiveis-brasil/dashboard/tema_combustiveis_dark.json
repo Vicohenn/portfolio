@@ -1,0 +1,59 @@
+{
+  "name": "Combustiveis Dark",
+  "dataColors": [
+    "#F5A623",
+    "#4FC3F7",
+    "#E5534B",
+    "#3FB950",
+    "#A371F7",
+    "#8B98A5",
+    "#F778BA",
+    "#56D4DD"
+  ],
+  "background": "#0F1419",
+  "foreground": "#E6EDF3",
+  "tableAccent": "#F5A623",
+  "good": "#3FB950",
+  "neutral": "#8B98A5",
+  "bad": "#E5534B",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Segoe UI Semibold", "color": "#E6EDF3" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#E6EDF3" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#E6EDF3" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#8B98A5" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          { "show": true, "color": { "solid": { "color": "#1A2332" } }, "transparency": 0 }
+        ],
+        "border": [
+          { "show": true, "color": { "solid": { "color": "#2D3748" } }, "radius": 8 }
+        ],
+        "visualHeader": [
+          {
+            "background": { "solid": { "color": "#1A2332" } },
+            "foreground": { "solid": { "color": "#8B98A5" } }
+          }
+        ],
+        "categoryAxis": [
+          { "gridlineColor": { "solid": { "color": "#2D3748" } } }
+        ],
+        "valueAxis": [
+          { "gridlineColor": { "solid": { "color": "#2D3748" } } }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          { "color": { "solid": { "color": "#0F1419" } }, "transparency": 0 }
+        ],
+        "outspace": [
+          { "color": { "solid": { "color": "#0F1419" } } }
+        ]
+      }
+    }
+  }
+}
