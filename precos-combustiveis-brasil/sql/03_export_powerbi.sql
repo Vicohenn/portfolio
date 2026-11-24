@@ -1,0 +1,1 @@
+COPY fato_precos_mensal TO 'data/powerbi/fato_preco_mensal.parquet' (FORMAT parquet);

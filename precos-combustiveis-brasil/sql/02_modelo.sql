@@ -40,3 +40,11 @@ SELECT
     regiao
 FROM precos
 GROUP BY ALL;
+
+CREATE OR REPLACE TABLE ipca AS
+SELECT
+    data AS mes,
+    ipca_mensal,
+    EXP(SUM(ln(1 + ipca_mensal / 100)) OVER (ORDER BY data)) AS indice
+FROM '../inflacao-juros-cambio-brasil/data/tratado/indicadores_mensais.parquet'
+WHERE data >= '2021-01-01';
