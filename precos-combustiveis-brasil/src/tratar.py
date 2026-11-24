@@ -38,6 +38,7 @@ def tratar(df):
         .str.zfill(14)
     )
     df["data_coleta"] = pd.to_datetime(df["data_coleta"], format='%d/%m/%Y')
+    df["unidade_medida"] = df["unidade_medida"].str.replace('m³', 'm3')
     return df
 
 
