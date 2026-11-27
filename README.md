@@ -18,7 +18,7 @@ Estudante de Ciência de Dados e estagiário de dados/BI no setor público de sa
 | [Análise de E-commerce — Olist](analise-ecommerce-olist/) | Análise de ~100 mil pedidos de um marketplace brasileiro: vendas, recompra, logística e satisfação do cliente | SQL (DuckDB), Power BI (DAX) | ✅ Concluído |
 | [Inflação, juros e câmbio no Brasil](inflacao-juros-cambio-brasil/) | Pipeline que coleta dados do Banco Central e do IBGE, atualizado todo mês com GitHub Actions | Python, pandas, APIs, GitHub Actions | ✅ Concluído |
 | [Preços de combustíveis no Brasil (2021-2026)](precos-combustiveis-brasil/) | Análise de 4,7 milhões de preços de combustíveis coletados pela ANP: evolução real (descontada a inflação), diferenças entre estados e bandeiras e quando o etanol compensa | Python, pandas, SQL (DuckDB), Power BI (DAX) | ✅ Concluído |
-| [Previsão de faltas em consultas](machine_learning) | Criação de a gente via aprendizado de máquina para previsão de possíveis faltantes em consultas médicas. | ⏳ Em andamento ...|
+| [Previsão de faltas em consultas](machine_learning) | Criação de a gente via aprendizado de máquina para previsão de possíveis faltantes em consultas médicas. | Python, pandas, matplotlib, numpy , scikit-learn | ⏳ Em andamento ...|
 
 ## Estudos
 
